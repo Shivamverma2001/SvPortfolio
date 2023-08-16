@@ -445,36 +445,11 @@ span{
 .skills-content .progress .bar span{
     display: block;
     height: 100%;
-    width: 100%;
+    width: 0;
     border-radius: .3rem; 
     background: var(--main-color);
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
-    width: 75%;
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 70%;
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 60%;
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 75%;
-}
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 75%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 70%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 60%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 75%;
+    transition: .5s;
+    animation: slide 5s infinite;
 }
 .contact{
     min-height: auto;
@@ -801,5 +776,14 @@ section:nth-child(odd) .animate.scroll,
 @keyframes showRight {
     100%{
         width: 0;
+    }
+}
+@keyframes slide {
+    0%,100% {
+        width: 0;
+    }
+    
+    50% {
+        width: 100%;
     }
 }
